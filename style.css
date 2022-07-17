@@ -1,0 +1,10 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.api-response-field{
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+}
