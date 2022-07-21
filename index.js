@@ -1,13 +1,18 @@
-const userInputForm = document.querySelector(".user-input-form")
+const userInputSubmitButtonHTMLElement = document.querySelector(".submit-input")
 const userQuestionHTMLElement = document.querySelector(".user-question");
-const apiResponseField = document.querySelector(".api-response-field")
+const returnedAnswerHTMLElement = document.querySelector(".api-response-field")
 
-const main = async (e) => {
+const main = (e) => {
     e.preventDefault();
     const userQuestionString = userQuestionHTMLElement.value;
+    
     console.log(userQuestionString);
-    const response = await fetch(`https://us-east4-glassy-signal-354012.cloudfunctions.net/get_answer/?message=${userQuestionString}`);
-    apiResponseField.innerHTML = response.json();
+    
+    fetch(`https://us-east4-glassy-signal-354012.cloudfunctions.net/get_answer/?message=${userQuestionString}`)
+        .then(response => response.json())
+        .then(data => returnedAnswerHTMLElement.innerHTML = data.answer + "<br><br>" + data.ref1);
+
+    
 };
 
-userInputForm.addEventListener("click", main);
+userInputSubmitButtonHTMLElement.addEventListener("click", main);

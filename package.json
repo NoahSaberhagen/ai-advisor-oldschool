@@ -1,0 +1,22 @@
+{
+  "name": "ai-oldschool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoahSaberhagen/ai-advisor-oldschool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoahSaberhagen/ai-advisor-oldschool/issues"
+  },
+  "homepage": "https://github.com/NoahSaberhagen/ai-advisor-oldschool#readme",
+  "dependencies": {
+    "flask": "^0.2.10"
+  }
+}
